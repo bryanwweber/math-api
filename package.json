@@ -4,11 +4,10 @@
   "version": "1.0.0",
   "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io/)",
   "scripts": {
-    "deploy": "vc",
-    "dev": "vc dev",
-    "rollout": "vc --target production && vc rm math --safe",
-    "test": "jest"
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
   },
+  "bin": {"math-api": "dist/server.js"},
   "dependencies": {
     "body-parser": "^1.20.0",
     "colord": "^2.9.2",
